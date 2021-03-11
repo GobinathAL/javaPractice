@@ -22,7 +22,7 @@ class AreaOfCircle {
         return this.perimeter;
     }
 }
-public class Circle {
+public class Methods {
     public static void main(String[] args) {
         AreaOfCircle circle1 = new AreaOfCircle();
         AreaOfCircle circle2 = new AreaOfCircle();
