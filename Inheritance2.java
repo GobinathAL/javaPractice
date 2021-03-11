@@ -1,3 +1,15 @@
+/*
+Create a class Book with following members:  
+B.No, Title, Author, Publisher, Price, number of books sold
+
+Derive a class Hard Copy from Book with following members:
+Number of pages
+
+Use constructors for initialization of data members.  
+a)Number of books sold should get updated for each hard Copy is sold
+b)For a given author find the number of books sold.
+c)Write function to find the book with highest price
+ */
 import java.util.Scanner;
 class Book {
     static int noOfBooksSold = 0;
