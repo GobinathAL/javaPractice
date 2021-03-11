@@ -45,7 +45,7 @@ class Matrix {
         System.out.println(sum);
     }
 }
-public class MatrixMain {
+public class Example1 {
     public static void main(String[] args) {
         Matrix m = new Matrix();
 
