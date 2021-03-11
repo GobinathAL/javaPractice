@@ -42,7 +42,7 @@ class Student {
         System.out.println("\nRegno :" + this.regno + "\nName: " + this.name + "\nmark1: " + this.mark1 + "\nmark2: " + this.mark2 + "\nmark3: " + this.mark3 + "\ntotal: " + this.total + "\naverage: " + this.average + "\nclass: " + this.Class + "\n");
     }
 }
-public class StudentMain {
+public class Example2 {
     public static void main(String[] args) {
         Student s1 = new Student();
         s1.get();
