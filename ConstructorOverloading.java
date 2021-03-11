@@ -25,7 +25,7 @@ class Coordinates {
         return str;
     }
 }
-public class XandY {
+public class ConstructorOverloading {
     public static void main(String[] args) {
         Coordinates A = new Coordinates(2, 3);
         Coordinates B = new Coordinates(1,2);
