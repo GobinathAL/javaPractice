@@ -11,7 +11,7 @@ class Rectangle {
         System.out.println("Object destroyed by garbage collector");
     }
 }
-public class RectangleArray {
+public class Finalize2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Rectangle[] arr = new Rectangle[10];
