@@ -25,7 +25,7 @@ class Laptop {
     }
 }
 
-public class LaptopMain {
+public class Finalize {
     public static void main(String[] args) throws Throwable {
         Laptop l1 = new Laptop("Hp", "Pavillion", 8, 512, true);
         Laptop l2 = new Laptop("Lenovo", "IdeaPad", 4, 256, false);
