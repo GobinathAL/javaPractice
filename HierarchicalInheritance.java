@@ -66,7 +66,7 @@ class LEDTV extends TV {
         System.out.println("Curved Display: " + isCurved);
     }
 }
-public class Inheritance {
+public class HierarchicalInheritance {
     public static void main(String[] args) {
         TV t1 = new TV("LG", "C1", 15, 45);
         ArrayList<String> ottApps = new ArrayList<String>();
