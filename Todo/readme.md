@@ -1,4 +1,4 @@
-#
+# Assignment
 # Learning Goals
 
 This programming assignment has the following learning goals.
