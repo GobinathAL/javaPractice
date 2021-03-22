@@ -41,7 +41,7 @@ The class also has several methods which are described in detail in the Methods 
 
 - **TodoListTester** class is used to fully test the correctness of the TodoList class implementation. Some test cases have already been provided for certain methods. Your job is to add more test cases to these methods. In addition, you will have to add test cases for methods where we have not provided test cases.
 
-## **4.2 Methods - DateTime**
+## **Methods - DateTime**
 
 There are **10 required methods** that you will complete in **DateTime**.
 
@@ -95,7 +95,7 @@ There are **10 required methods** that you will complete in **DateTime**.
 | Method Header: public boolean equals(Object obj)  |
 | Description: This method overrides the Java Object&#39;s equals(Object obj) method. This method returns true if this DateTime is equivalent to obj. It first checks whether the object is of type DateTime. You may use **i**** nstanceof** to check this. Then it checks whether the values in the fields are the same for both _this_ and _obj_. If the fields have the same value, it returns true. Otherwise, return false. |
 
-## **4.3 Methods - TodoItem**
+## **Methods - TodoItem**
 
 There are **13 required methods** that you will complete in **TodoItem**.
 
@@ -164,7 +164,7 @@ There are **13 required methods** that you will complete in **TodoItem**.
 | Method Header: public boolean equals(Object obj)  |
 | Description: This method overrides the Java Object&#39;s equals(Object obj) method. This method returns true if _this_ TodoItem is equivalent to obj.  It first checks whether the object obj is of type TodoItem. You may use **i**** nstanceof** to check this. Then it checks whether the values in the fields are the same for both _this_ and _obj_. If the fields have the same value, it returns true. Otherwise, return false. |
 
-## **4.3 Methods - TodoList**
+## **Methods - TodoList**
 
 There are **14 required methods** and **3 optional methods** in **TodoList**.
 
