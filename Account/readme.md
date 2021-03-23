@@ -1,4 +1,4 @@
-# Inheritance and Interface
+# Abstract Class and Interface
 
 1. Create an abstract class called **Account** that has datamembers: **accno**(int), **accname**(String) and **balance**(double). The member methods are: parameterized constructor and toString method. Abstract methods : **void deposit(double amt)** and **double withdraw(double amt)**
 2. Derive two classes from class **Account: SavingsAccout** and **CheckingAccount**. The members of **SavingsAccount** are **noofTransactions**(int), parameterized constructor, overridden methods **toString(), deposit(double amt)** that increments balance with amt, **withdraw(double amt)** that decrements balance by amt and **noofTransactions** is incremented by 1 inside **deposit()** and **withdraw**. The members of **CheckingAccount** are parameterized constructor, overrideen methods **deposit(double amt)** that increments balance with amt, **withdraw(double amt)** that decrements the balance by amt only if the balance is above 1000 after decrementation and **toString()**.
