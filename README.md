@@ -16,9 +16,9 @@ Learning java by doing lots of programs
 * [x] super keyword
 * [x] Hierarchical Inheritance
 * [ ] Multi level Inheritance
-* [ ] Interface
+* [x] Interface
 * [ ] Package
-* [ ] Abstract Class
+* [x] Abstract Class
 * [ ] Enums
 * [ ] Regex
 * [ ] GUI
