@@ -1,6 +1,5 @@
 import java.io.*;
 import java.util.*;
-
 public class TodoList {
     private static final int DEFAULT_MAX_ITEMS = 10;
     TodoItem[] items;
@@ -39,7 +38,6 @@ public class TodoList {
             endIndex = ele.indexOf(']');
             DateTime dueDate = new DateTime(ele.substring(beginIndex, endIndex));
             TodoItem t = new TodoItem(task, isComplete, dueDate);
-            System.out.println(t.toString());
             this.addItem(t);
         }
     }   
@@ -82,42 +80,29 @@ public class TodoList {
         return temp;
     }
     public TodoItem[] getUnfinishedItems() {
-        int l = 0;
+        ArrayList<TodoItem> list = new ArrayList<TodoItem>();
         for(TodoItem i : items) {
+            if(i == null) continue;
             if(!i.isComplete()) {
-                l++;
+                list.add(i);
             }
         }
-        if(l == 0) return null;
-        TodoItem[] arr = new TodoItem[l];
-        int index = 0;
-        for(TodoItem i : items) {
-            if(!i.isComplete()) {
-                arr[index++] = i;
-            }
-        }
-        return arr;
+        return list.toArray(new TodoItem[list.size()]);
     }
     public TodoItem[] findItems(String word) {
         if(word == null) return null;
-        int l = 0;
+        ArrayList<TodoItem> list = new ArrayList<TodoItem>();
         for(TodoItem i : items) {
+            if(i == null) continue;
             if(i.getTask().toLowerCase().contains(word)) {
-                l++;
+                list.add(i);
             }
         }
-        if(l == 0) return null;
-        TodoItem[] arr = new TodoItem[l];
-        int index = 0;
-        for(TodoItem i : items) {
-            if(i.getTask().toLowerCase().contains(word)) {
-                arr[index++] = i;
-            }
-        }
-        return arr;
+        return list.toArray(new TodoItem[list.size()]);
     }
     public TodoItem findItem(int id) {
         for(TodoItem i : items) {
+            if(i == null) continue;
             if(i.getId() == id)
                 return i;
         }
@@ -157,27 +142,40 @@ public class TodoList {
     public TodoItem[] nextItemsToWorkOn() {
         DateTime minDueDate = new DateTime(Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE);
         for(TodoItem i : items) {
+            if(i == null) continue;
             if(i.isComplete() || i.getDueDate() == null) continue;
             if(i.getDueDate().compare(minDueDate) == -1) {
                 minDueDate = i.getDueDate();
             }
         }
-        int l = 0;
+        ArrayList<TodoItem> list = new ArrayList<TodoItem>();
         for(TodoItem i : items) {
+            if(i == null) continue;
             if(i.isComplete() || i.getDueDate() == null) continue;
             if(i.getDueDate().equals(minDueDate)) {
-                l++;
+                list.add(i);
             }
         }
-        if(l == 0) return null;
-        TodoItem[] arr = new TodoItem[l];
-        int index = 0;
+        return list.toArray(new TodoItem[list.size()]);
+    }
+    public TodoItem[] getOverdueItems(DateTime currentDateTime) {
+        if(currentDateTime == null) return null;
+        ArrayList<TodoItem> list = new ArrayList<TodoItem>();
         for(TodoItem i : items) {
-            if(i.isComplete() || i.getDueDate() == null) continue;
-            if(i.getDueDate().equals(minDueDate)) {
-                arr[index++] = i;
-            }
+            if(i == null) continue;
+            if(i.getDueDate() == null || i.isComplete() || i.getDueDate().compare(currentDateTime) > 0) continue;
+            list.add(i);
         }
-        return arr;
+        return list.toArray(new TodoItem[list.size()]);
+    }
+    public TodoItem[] findItems(DateTime fromDateTime, DateTime toDateTime) {
+        if(fromDateTime == null || toDateTime == null || fromDateTime.compare(toDateTime) > 0) return null;
+        ArrayList<TodoItem> list = new ArrayList<TodoItem>();
+        for(TodoItem i : items) {
+            if(i == null) continue;
+            if(i.getDueDate() == null || i.getDueDate().compare(toDateTime) > 0 || i.getDueDate().compare(fromDateTime) < 0 ) continue;
+            list.add(i);
+        }
+        return list.toArray(new TodoItem[list.size()]);
     }
 }
