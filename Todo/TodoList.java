@@ -14,7 +14,7 @@ public class TodoList {
         count = 0;
     }
     public TodoList(String inputFile) throws FileNotFoundException {
-        FileReader f = new FileReader("todo.txt");
+        FileReader f = new FileReader(inputFile);
         int c;
         String s = "";
         try {
