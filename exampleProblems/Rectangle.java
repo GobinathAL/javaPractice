@@ -3,11 +3,15 @@ public class Rectangle extends Region {
     double height, width;
 
     public Rectangle(Point topLeftCorner, double height, double width) {
+        this.name = "Rectangle";
         this.topLeftCorner = new Point(topLeftCorner.x, topLeftCorner.y);
         this.height = height;
         this.width = width;
     }
 
+    public Point getTopLeftCorner() {
+        return topLeftCorner;
+    }
     public double getHeight() {
         return height;
     }

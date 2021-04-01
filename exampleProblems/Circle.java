@@ -3,6 +3,7 @@ public class Circle extends Region{
     Double radius;
 
     public Circle(Point center, Double radius) {
+        this.name = "Circle";
         this.center = new Point(center.x, center.y);
         this.radius = radius;
     }
@@ -23,6 +24,6 @@ public class Circle extends Region{
     }
     @Override
     void printDetails() {
-        System.out.println("Name: " + name + "Area: " + this.area());
+        System.out.println("Name: " + name + " Area: " + this.area());
     }
 }
