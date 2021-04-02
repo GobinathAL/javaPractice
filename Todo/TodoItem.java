@@ -54,7 +54,7 @@ public class TodoItem {
     public boolean equals(Object obj) {
         if(obj instanceof TodoItem) {
             TodoItem todoItem = (TodoItem) obj;
-            return (task == todoItem.task && isComplete == todoItem.isComplete && dueDate == todoItem.dueDate && id == todoItem.id);
+            return (task == todoItem.task && isComplete == todoItem.isComplete && dueDate.equals(todoItem.dueDate) && id == todoItem.id);
         }
         return false;
     }
