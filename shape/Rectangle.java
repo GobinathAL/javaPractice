@@ -32,7 +32,7 @@ public class Rectangle extends Region {
         topRightCorner = new Point(topLeftCorner.x + width, topLeftCorner.y);
         bottomLeftCorner = new Point(topLeftCorner.x, topLeftCorner.y - height);
 
-        if (p.x > topLeftCorner.x && p.x < topRightCorner.x && p.y > bottomLeftCorner.y && p.y < topLeftCorner.y) {
+        if (p.x >= topLeftCorner.x && p.x <= topRightCorner.x && p.y >= bottomLeftCorner.y && p.y <= topLeftCorner.y) {
             return true;
         } else
             return false;

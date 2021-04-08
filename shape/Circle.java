@@ -23,7 +23,7 @@ public class Circle extends Region {
 
     @Override
     public boolean contains(Point p) {
-        boolean ans = ((p.x - center.x) * (p.x - center.x) + (p.y - center.y) * (p.y - center.y)) < (radius * radius);
+        boolean ans = ((p.x - center.x) * (p.x - center.x) + (p.y - center.y) * (p.y - center.y)) <= (radius * radius);
         return ans;
     }
 
