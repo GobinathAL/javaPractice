@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+
 public class StudentDriver {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -18,16 +19,18 @@ public class StudentDriver {
         double cgpa = sc.nextDouble();
         System.out.println("Courses:");
         ArrayList<String> coursesEnrolled = new ArrayList<String>();
-        while(true) {
+        while (true) {
             String s = sc.next();
-            if(s.equals("exit")) break;
+            if (s.equals("exit"))
+                break;
             coursesEnrolled.add(s);
         }
         System.out.println("arrear courses:");
         ArrayList<String> arrearCourses = new ArrayList<String>();
-        while(true) {
+        while (true) {
             String s = sc.next();
-            if(s.equals("exit")) break;
+            if (s.equals("exit"))
+                break;
             arrearCourses.add(s);
         }
 
@@ -37,18 +40,16 @@ public class StudentDriver {
         System.out.println("Enter a course to check if the student has enrolled in it");
         String course = sc.next();
         ugS.hasEnrolledIn(course);
-        if(ugS.hasEnrolledIn(course)) {
+        if (ugS.hasEnrolledIn(course)) {
             System.out.println("Student has enrolled in " + course);
-        }
-        else {
+        } else {
             System.out.println("Student has not enrolled in " + course);
         }
         System.out.println("Enter a course to check if the student has arrear in it");
         course = sc.next();
-        if(ugS.hasArrearIn(course)) {
+        if (ugS.hasArrearIn(course)) {
             System.out.println("Student has arrear in " + course);
-        }
-        else {
+        } else {
             System.out.println("Student has not arrear in " + course);
         }
         System.out.println(ugS.name + "'s BMI: " + ugS.calculateBMI());
@@ -67,16 +68,18 @@ public class StudentDriver {
         cgpa = sc.nextDouble();
         System.out.println("courses:");
         coursesEnrolled.clear();
-        while(true) {
+        while (true) {
             String s = sc.next();
-            if(s.equals("exit")) break;
+            if (s.equals("exit"))
+                break;
             coursesEnrolled.add(s);
         }
         System.out.println("arrear courses:");
         arrearCourses.clear();
-        while(true) {
+        while (true) {
             String s = sc.next();
-            if(s.equals("exit")) break;
+            if (s.equals("exit"))
+                break;
             arrearCourses.add(s);
         }
         System.out.print("UG College Name:");
@@ -87,18 +90,16 @@ public class StudentDriver {
         System.out.println("No of arrears:" + pgS.getNoOfArrears());
         System.out.println("Enter a course to check if the student has enrolled in it");
         course = sc.next();
-        if(pgS.hasEnrolledIn(course)) {
+        if (pgS.hasEnrolledIn(course)) {
             System.out.println("Student has enrolled in " + course);
-        }
-        else {
+        } else {
             System.out.println("Student has not enrolled in " + course);
         }
         System.out.println("Enter a course to check if the student has arrear in it");
         course = sc.next();
-        if(pgS.hasArrearIn(course)) {
+        if (pgS.hasArrearIn(course)) {
             System.out.println("Student has arrear in " + course);
-        }
-        else {
+        } else {
             System.out.println("Student has not arrear in " + course);
         }
 
