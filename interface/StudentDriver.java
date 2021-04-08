@@ -84,7 +84,7 @@ public class StudentDriver {
         }
         System.out.print("UG College Name:");
         String ugCollegeName = sc.next();
-        PGStudent pgS = new PGStudent(rollno, name, cgpa, coursesEnrolled, arrearCourses, ugCollegeName);
+        PGStudent pgS = new PGStudent(rollno, name, address, weight, height, cgpa, coursesEnrolled, arrearCourses, ugCollegeName);
 
         System.out.println(pgS.toString());
         System.out.println("No of arrears:" + pgS.getNoOfArrears());
@@ -105,5 +105,6 @@ public class StudentDriver {
 
         System.out.println("Student has completed UG in " + pgS.getugCollegeName());
         System.out.println(pgS.name + "'s BMI: " + pgS.calculateBMI());
+        sc.close();
     }
 }

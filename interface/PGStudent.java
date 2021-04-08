@@ -6,10 +6,12 @@ class PGStudent extends Student {
     ArrayList<String> coursesEnrolled, arrearCourses;
     String qualification = "ug complete", ugCollegeName;
 
-    public PGStudent(int rollno, String name, double cgpa, ArrayList<String> coursesEnrolled,
+    public PGStudent(int rollno, String name,String address, double weight, double height, double cgpa, ArrayList<String> coursesEnrolled,
             ArrayList<String> arrearCourses, String ugCollegeName) {
         this.rollno = rollno;
         this.name = name;
+        this.weight = weight;
+        this.height = height;
         this.cgpa = cgpa;
         this.coursesEnrolled = new ArrayList<String>(coursesEnrolled);
         this.arrearCourses = new ArrayList<String>(arrearCourses);
