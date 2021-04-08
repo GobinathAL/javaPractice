@@ -5,7 +5,7 @@ abstract class Student implements Person {
     double weight, height;
 
     public double calculateBMI() {
-        return (weight / (height * height)) / 10000;
+        return (weight / (height * height)) * 10000;
     }
 
     @Override

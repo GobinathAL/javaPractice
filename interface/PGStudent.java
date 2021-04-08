@@ -10,6 +10,7 @@ class PGStudent extends Student {
             ArrayList<String> arrearCourses, String ugCollegeName) {
         this.rollno = rollno;
         this.name = name;
+        this.address = address;
         this.weight = weight;
         this.height = height;
         this.cgpa = cgpa;
