@@ -28,15 +28,11 @@ public class Rectangle extends Region {
 
     @Override
     public boolean contains(Point p) {
-        Point topRightCorner, bottomLeftCorner, bottomRightCorner;
+        Point topRightCorner, bottomLeftCorner;
         topRightCorner = new Point(topLeftCorner.x + width, topLeftCorner.y);
         bottomLeftCorner = new Point(topLeftCorner.x, topLeftCorner.y - height);
-        bottomRightCorner = new Point(bottomLeftCorner.y, topRightCorner.x);
 
-        System.out.println(topRightCorner.x + " " + topRightCorner.y);
-        System.out.println(bottomLeftCorner.x + " " + bottomLeftCorner.y);
-        System.out.println(bottomRightCorner.x + " " + bottomRightCorner.y);
-        if (p.x >= topLeftCorner.x && p.x <= topRightCorner.x && p.y >= bottomLeftCorner.y && p.y <= topLeftCorner.y) {
+        if (p.x > topLeftCorner.x && p.x < topRightCorner.x && p.y > bottomLeftCorner.y && p.y < topLeftCorner.y) {
             return true;
         } else
             return false;
