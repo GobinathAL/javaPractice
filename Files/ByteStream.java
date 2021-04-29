@@ -15,9 +15,9 @@ public class ByteStream {
             }
             bis.close();
             System.out.println(arr);
-            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("output2.txt"));
+            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("output.txt"));
             bos.write(arr.getBytes());
             bos.close();
-            System.out.println("Written contents of " + file.getName() + " to output2.txt");
+            System.out.println("Written contents of " + file.getName() + " to output.txt");
     }
 }
