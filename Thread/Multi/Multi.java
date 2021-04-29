@@ -1,29 +1,37 @@
 import java.util.Scanner;
 
 class Count {
-    static int counter = 0;
-    public static void increment() {
+    int counter = 0;
+    public void increment() {
         counter++;
     }
-    public static void decrement() {
+    public void decrement() {
         counter--;
     }
 }
 class ThreadA implements Runnable {
+    Count obj;
+    public ThreadA(Count obj) {
+        this.obj = obj;
+    }
     @Override
     public void run() {
         for(int i = 0; i < 5; i++) {
-            Count.increment();
-            System.out.println(Count.counter);
+            obj.increment();
+            System.out.println(obj.counter);
         }
     }
 }
 class ThreadB implements Runnable {
+    Count obj;
+    public ThreadB(Count obj) {
+        this.obj = obj;
+    }
     @Override
     public void run() {
         for(int i = 0; i < 5; i++) {
-            Count.decrement();
-            System.out.println(Count.counter);
+            obj.decrement();
+            System.out.println(obj.counter);
         }
     }
 }
@@ -32,9 +40,10 @@ public class Multi {
 
     public static void main(String[] args) throws InterruptedException {
         Scanner sc = new Scanner(System.in);
-        Thread t1 = new Thread(new ThreadA());
+        Count obj = new Count();
+        Thread t1 = new Thread(new ThreadA(obj));
         t1.setName("Increment thread");
-        Thread t2 = new Thread(new ThreadB());
+        Thread t2 = new Thread(new ThreadB(obj));
         t2.setName("Decrement thread");
         t1.start();
         t2.start();
