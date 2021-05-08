@@ -1,16 +1,7 @@
 import java.util.Scanner;
 import java.io.*;
 import java.net.*;
-class Structure {
-    char a;
-    int b;
-    float c;
-    public Structure(char a, int b, float c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-    }
-}
+
 public class ObjectClient1 {
     public static void main(String[] args) throws UnknownHostException, IOException {
         Scanner sc = new Scanner(System.in);

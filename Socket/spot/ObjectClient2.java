@@ -6,6 +6,6 @@ public class ObjectClient2 {
         ObjectInputStream ois = new ObjectInputStream(clientSocket.getInputStream());
         Structure obj = (Structure) ois.readObject();
         ois.close();
-        System.out.println(obj.toString());
+        System.out.println("Server:\n" + obj.toString());
     }
 }

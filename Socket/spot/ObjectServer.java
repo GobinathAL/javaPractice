@@ -14,7 +14,7 @@ public class ObjectServer {
         ObjectInputStream ois = new ObjectInputStream(server.getInputStream());
         Structure obj = (Structure) ois.readObject();
         ois.close();
-        System.out.println(obj.toString());
+        System.out.println("Client1:\n" + obj.toString());
         obj.a = 'A';
         obj.b = 69;
         obj.c = 2.9f;
