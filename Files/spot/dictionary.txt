@@ -1,2 +1,2 @@
-apple    fruit
-banana    fruit yellow in color
+apple    fruit which is red
+word2    newmeaning2

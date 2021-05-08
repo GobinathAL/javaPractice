@@ -18,6 +18,6 @@ public class ServerTCP {
             } while(s.length() > 0);
         } catch (IOException e) {
             e.printStackTrace();
-    }
+        }
     }
 }
