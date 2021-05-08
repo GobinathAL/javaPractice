@@ -7,6 +7,5 @@ public class LetterClient2 {
         char a = dis.readChar();
         dis.close();
         System.out.println("Server: " + a);
-        sc.close();
     }
 }
