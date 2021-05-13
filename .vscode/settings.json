@@ -1,5 +1,9 @@
 {
     "java.project.sourcePaths": [
         ""
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\gobin\\Downloads\\mysql-connector-java-8.0.25.jar"
     ]
 }

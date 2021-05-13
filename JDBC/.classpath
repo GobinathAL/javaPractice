@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+        <classpathentry exported="true" kind="." path="mysql-connector-java-8.0.25.jar"/>
+</classpath>
