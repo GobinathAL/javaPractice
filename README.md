@@ -22,6 +22,7 @@ Learning java by doing lots of programs
 * [ ] Enums
 * [ ] Regex
 * [ ] GUI
-* [ ] File Handling
+* [x] File Handling
 * [ ] Lambda
-* [ ] Threads
+* [x] Threads
+* [x] Sockets
